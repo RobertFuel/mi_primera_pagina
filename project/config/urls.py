@@ -22,5 +22,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path("", include("prueba.urls")),
+    path("cliente/", include("cliente.urls"))
 ]
