@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
+from . import models
 
 def index(request):
-    contexto = {"nombre": "Cliente"}
-    return render(request, "cliente/index.html", contexto)
+    clientes = models.Cliente.objects.all()
+    
+    return render(request, "cliente/index.html", {"clientes":clientes})
