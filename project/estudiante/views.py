@@ -37,4 +37,14 @@ def crearfr(request):
     else:
         form = forms.Estudiante3Form()
     return render(request, "estudiante/crearfr.html", {"form": form})
+
+def crearpais(request):
+    if request.method == "POST":
+        form = forms.PaisForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("home:index")
+    else:
+        form = forms.PaisForm()
+    return render(request, "estudiante/crearpais.html", {"form": form})
     

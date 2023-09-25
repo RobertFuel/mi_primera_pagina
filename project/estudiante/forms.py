@@ -16,3 +16,8 @@ class Estudiante3Form(forms.ModelForm):
     class Meta:
         model = models.EstudianteFR
         fields = ["nombre", "apellido", "nacimiento", "nacionalidad"]
+        
+class PaisForm(forms.ModelForm):
+    class Meta:
+        model = models.Pais
+        fields = ["nombre"]

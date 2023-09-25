@@ -9,4 +9,5 @@ urlpatterns = [
     path("crearen/", views.crearen, name="crearen"),
     path("crearfr/", views.crearfr, name="crearfr"),
     path("creares/", views.creares, name="creares"),
+    path("crearpais/", views.crearpais, name="crearpais"),
 ]

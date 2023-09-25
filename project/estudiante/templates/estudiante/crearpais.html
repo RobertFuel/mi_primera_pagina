@@ -1,17 +1,17 @@
 {% extends 'home/base.html' %}
 
 {% block title %}
-    <h2>Crear estudiante</h2>
+    <h2>Crear pais</h2>
 {% endblock title %}
 
 {% block content %}
-    <h3>Inscribete en nuestro curso de <strong>FRANCES</strong></h3>
+    <h3>Crea tu <strong>PAIS</strong></h3>
     <form action="" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Guardar</button>
     </form>
-    <p><a href="{% url 'estudiante:crearpais' %}">si no aparece tu nacionalidad presiona aqui</a></p>
+
     <p><a href="{% url 'home:index' %}">Ir al menu principal</a></p>
         
 {% endblock content %}
