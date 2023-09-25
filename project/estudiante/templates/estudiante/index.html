@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+    
+{% endblock title %}
+
+{% block content %}
+    <h1>Estudiantes Inscritos</h1>
+    <ul>
+        {% for estudiante in estudiantesEN %}
+            <li>CURSO INGLES{{estudianteEN.nombre}} {{estudianteEN.apellido}}</li>
+        {% endfor %}
+
+        {% for estudiante in estudiantesES %}
+            <li>CURSO ESPAÑOL{{estudianteES.nombre}} {{estudianteES.apellido}}</li>
+        {% endfor %}
+
+        {% for estudiante in estudiantesFR %}
+            <li>CURSO FRANCES{{estudianteFR.nombre}} {{estudianteFR.apellido}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+   
