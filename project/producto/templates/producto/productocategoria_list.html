@@ -1,0 +1,13 @@
+{% extends 'producto/base.html' %}
+
+{% block producto %}
+
+    {% for producto in object_list %}
+
+        <ul>
+            {{ producto.nombre }}
+        
+
+    {% endfor %}
+
+{% endblock producto %}
