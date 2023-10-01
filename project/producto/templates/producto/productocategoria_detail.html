@@ -1,0 +1,11 @@
+{% extends 'producto/base.html' %}
+
+{% block producto %}
+
+        <ul>
+            <li><strong>Nombre:</strong> {{ object.nombre }}</li>
+        </ul>
+
+    <a href="{% url 'producto:index' %}" class="btn btn-dark ">Volver a tienda</a>
+
+{% endblock producto %}

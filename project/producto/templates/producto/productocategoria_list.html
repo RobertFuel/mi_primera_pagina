@@ -6,8 +6,14 @@
 
         <ul>
             {{ producto.nombre }}
-        
+                <a href="{% url 'producto:productocategoria_detail' producto.id %}">Ver detalle</a>
+                <a href="">Editar</a>
+                <a href="">Eliminar</a>
+        </ul>
 
     {% endfor %}
+
+    <a href="{% url 'producto:productocategoria_form' %}" class="btn btn-success ">Crear Categoria</a>
+    <a href="{% url 'producto:index' %}" class="btn btn-dark ">Volver a tienda</a>
 
 {% endblock producto %}

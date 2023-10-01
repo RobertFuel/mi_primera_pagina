@@ -1,0 +1,15 @@
+{% extends 'producto/base.html' %}
+
+{% block producto %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="d-grid gap-3">
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+    </form>
+
+    <a href="{% url 'producto:index' %}" class="btn btn-dark ">Volver a tienda</a>
+
+{% endblock producto %}
