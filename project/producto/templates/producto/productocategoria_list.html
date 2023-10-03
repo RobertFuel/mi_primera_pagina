@@ -2,13 +2,20 @@
 
 {% block producto %}
 
+    <div class="py-4">
+        <form action="" method="get">
+            <input type="text" name="buscar" placeholder="Categoria a buscar">
+        </form>
+
+    </div>
+
     {% for producto in object_list %}
 
         <ul>
             {{ producto.nombre }}
                 <a href="{% url 'producto:productocategoria_detail' producto.id %}">Ver detalle</a>
-                <a href="">Editar</a>
-                <a href="">Eliminar</a>
+                <a href="{% url 'producto:productocategoria_update' producto.id %}">Editar</a>
+                <a href="{% url 'producto:productocategoria_delete' producto.id %}">Eliminar</a>
         </ul>
 
     {% endfor %}
